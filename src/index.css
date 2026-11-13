@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #fbf9f5;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f5f2eb;
+  --bg-dark: #1c1917;
+  --ink-primary: #1c1917;
+  --ink-body: #292524;
+  --ink-muted: #78716c;
+  --ink-on-dark: #f5f5f4;
+  --border-fine: #eae6df;
+  --accent-sage: #1e3a2b;
+  --accent-olive: #3f4e34;
+  --accent-vermilion: #c2410c;
+  --accent-brass: #92400e;
+  --sky-mist: #dfeaf0;
+  --sky-warm: #eef3ea;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+  text-wrap: balance;
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.editorial-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-fine);
+  box-shadow: 0 8px 30px -6px rgba(28, 25, 23, 0.04),
+    0 2px 6px -1px rgba(28, 25, 23, 0.02);
+}
+
+.editorial-dark-card {
+  background-color: var(--bg-dark);
+  color: var(--ink-on-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 34px -10px rgba(28, 25, 23, 0.18);
+}
+
+.editorial-sky-frame {
+  background: linear-gradient(
+    180deg,
+    #f3f1eb 0%,
+    #dce8ee 38%,
+    #d4e4ec 68%,
+    #e8ede7 100%
+  );
+  border: 1px solid var(--border-fine);
+}
+
+.editorial-dots-bg {
+  background-image: radial-gradient(rgba(28, 25, 23, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+input[type="range"].editorial-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: #e5dfd5;
+  outline: none;
+}
+
+input[type="range"].editorial-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--accent-olive);
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(28, 25, 23, 0.25);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"].editorial-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
