@@ -1,0 +1,7 @@
+name = "meridian-folio-kv-sync"
+main = "worker.ts"
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "MERIDIAN_VAULT"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
