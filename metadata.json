@@ -1,6 +1,0 @@
-{
-  "name": "Morphos",
-  "description": "Polymorphic Scrollytelling & Analytical Intelligence Engine with browser-native PDF/CSV ingestion, dynamic domain routing, procedural SVG visualizations, and interactive rule sandboxes.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
