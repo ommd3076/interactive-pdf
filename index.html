@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meridian Folio — Editorial Data Visualization & Encrypted Local-First Dashboard</title>
+    <meta
+      name="description"
+      content="Interactive editorial data visualization dashboard with responsive SVG charts, scrollytelling columns, accessible data tables, client-side AES-256-GCM encryption, and Cloudflare KV sync."
+    />
+    <meta property="og:title" content="Meridian Folio — Editorial Data Visualization Dashboard" />
+    <meta
+      property="og:description"
+      content="Interactive editorial data visualization dashboard with responsive SVG charts, scrollytelling columns, accessible data tables, client-side AES-256-GCM encryption, and Cloudflare KV sync."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('meridian_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-stone-50 text-stone-900 dark:bg-[#0B0E14] dark:text-slate-100 antialiased selection:bg-blue-700/15 selection:text-blue-900 dark:selection:bg-blue-400/20 dark:selection:text-blue-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
