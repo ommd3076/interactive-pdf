@@ -1,0 +1,6 @@
+{
+  "name": "Meridian Folio",
+  "description": "Interactive editorial data visualization dashboard with headless encrypted local-first engine, Cloudflare KV synchronization, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
